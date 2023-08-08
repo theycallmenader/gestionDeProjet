@@ -1,0 +1,12 @@
+{% extends "template.html" %} {% block profile %}
+<div class="container d-flex justify-content-center align-items-center">
+  
+  <h1>{{ r.firstname }} is conected as {{r.role}} </h1> 
+  </div>
+<div class="container min-vh-100 d-flex justify-content-center align-items-center" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary">View User</button>
+    <button type="button" class="btn btn-primary">Vie Project</button>
+    <button type="button" class="btn btn-primary">Logout</button>
+
+</div>
+{% endblock %}

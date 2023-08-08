@@ -1,0 +1,70 @@
+{% extends "template.html" %} {% block editProject %}
+
+<h1 class="text-center">edit Projet</h1>
+
+<form
+  method="post"
+  action="index.php?action=EditProjectPost"
+  enctype="multipart/form-data"
+>
+  <input
+    required
+    type="hidden"
+    placeholder="ID of project"
+    class="form-control"
+    id="id"
+    name="id"
+    value="{{r.projectID}}"
+  />
+
+  <div class="form-group">
+    <label for="projectAdminID">project Admin ID</label>
+    <input
+      required
+      type="text"
+      placeholder="project Admin ID"
+      class="form-control"
+      id="projectAdminID"
+      name="projectAdminID"
+      value="{{r.projectAdminID}}"
+    />
+  </div>
+  <div class="form-group">
+    <label for="projectdetails">Project detaills</label>
+    <input
+      required
+      type="text"
+      placeholder="projectdetails"
+      class="form-control"
+      id="projectdetails"
+      name="projectdetails"
+      value="{{r.projectdetails}}"
+    />
+  </div>
+  <div class="form-group">
+    <label for="d_debut">date de début</label>
+    <input
+      type="date"
+      class="form-control"
+      id="d_debut"
+      name="d_debut"
+      value="{{r.projectStartDate}}"
+    />
+  </div>
+  <div class="form-group">
+    <label for="d_fin">date Fin</label>
+    <input
+      type="date"
+      class="form-control"
+      id="d_fin"
+      name="d_fin"
+      value="{{r.projectEndDate}}"
+    />
+  </div>
+
+  <button type="submit" name="submit" class="btn btn-primary btn-block">
+    Submit
+  </button>
+</form>
+
+{% endblock %}
